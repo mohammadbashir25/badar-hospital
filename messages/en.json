@@ -1,0 +1,156 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "specialties": "Specialties",
+    "doctors": "Doctors",
+    "facilities": "Facilities",
+    "contact": "Contact",
+    "bookAppointment": "Book an Appointment"
+  },
+
+  "hero": {
+    "eyebrow": "Trusted Healthcare",
+    "title": "Your Health, Our Priority",
+    "description": "Providing professional, compassionate, and patient-centered healthcare with modern medical facilities and dedicated healthcare professionals.",
+    "primaryCta": "Book an Appointment",
+    "secondaryCta": "Explore Our Services",
+    "emergency": "Emergency Care",
+    "available": "Available 24/7"
+  },
+
+  "stats": {
+    "patients": "Patients Served",
+    "doctors": "Medical Professionals",
+    "specialties": "Medical Specialties",
+    "support": "Patient Support"
+  },
+
+  "about": {
+    "eyebrow": "About Badar Medical Hospital",
+    "title": "Healthcare Built Around You",
+    "description": "Badar Medical Hospital is committed to providing trusted healthcare in a professional, respectful, and compassionate environment.",
+    "descriptionTwo": "Our dedicated healthcare team works to deliver quality medical care while putting the needs, comfort, and well-being of every patient first.",
+    "primaryCta": "Learn More About Us",
+    "imageAlt": "Badar Medical Hospital"
+  },
+
+  "services": {
+    "eyebrow": "Our Services",
+    "title": "Comprehensive Care for Every Need",
+    "description": "Our healthcare services are designed to support patients throughout their medical journey.",
+    "viewAll": "View All Services",
+
+    "emergency": {
+      "title": "Emergency Care",
+      "description": "Timely medical attention when you need it most."
+    },
+
+    "outpatient": {
+      "title": "Outpatient Care",
+      "description": "Professional consultations and medical care without hospitalization."
+    },
+
+    "diagnostics": {
+      "title": "Diagnostic Services",
+      "description": "Modern diagnostic support to help healthcare professionals make informed decisions."
+    },
+
+    "pharmacy": {
+      "title": "Pharmacy Services",
+      "description": "Convenient access to prescribed medicines and pharmaceutical support."
+    }
+  },
+
+  "specialties": {
+    "eyebrow": "Medical Specialties",
+    "title": "Specialized Care From Dedicated Professionals",
+    "description": "Access focused medical care across a range of specialties.",
+    "viewAll": "Explore All Specialties",
+
+    "generalMedicine": {
+      "title": "General Medicine",
+      "description": "Comprehensive medical care for adults and common health concerns."
+    },
+
+    "surgery": {
+      "title": "Surgery",
+      "description": "Professional surgical care supported by experienced medical teams."
+    },
+
+    "pediatrics": {
+      "title": "Pediatrics",
+      "description": "Dedicated healthcare services focused on children and their well-being."
+    },
+
+    "gynecology": {
+      "title": "Gynecology",
+      "description": "Professional healthcare services focused on women's health."
+    }
+  },
+
+  "doctors": {
+    "eyebrow": "Our Doctors",
+    "title": "Meet Our Healthcare Professionals",
+    "description": "Our medical professionals are dedicated to providing respectful, compassionate, and quality patient care.",
+    "viewAll": "Meet Our Doctors",
+    "viewProfile": "View Profile"
+  },
+
+  "facilities": {
+    "eyebrow": "Our Facilities",
+    "title": "A Modern Environment for Better Care",
+    "description": "Our facilities are designed to provide patients with a comfortable, professional, and supportive healthcare environment.",
+    "viewAll": "Explore Our Facilities",
+
+    "modern": {
+      "title": "Modern Facilities",
+      "description": "A professional healthcare environment designed around patient needs."
+    },
+
+    "diagnostic": {
+      "title": "Diagnostic Support",
+      "description": "Facilities supporting accurate and efficient medical assessment."
+    },
+
+    "patientCare": {
+      "title": "Patient-Centered Care",
+      "description": "A comfortable environment where patient needs come first."
+    }
+  },
+
+  "cta": {
+    "eyebrow": "Your Health Matters",
+    "title": "Take the Next Step Toward Better Care",
+    "description": "Our team is here to help you access the healthcare and support you need.",
+    "primaryCta": "Book an Appointment",
+    "secondaryCta": "Contact Us"
+  },
+
+  "footer": {
+    "description": "Professional, compassionate, and patient-centered healthcare for our community.",
+    "quickLinks": "Quick Links",
+    "services": "Services",
+    "contact": "Contact Us",
+    "address": "Address",
+    "phone": "Phone",
+    "email": "Email",
+    "openingHours": "Opening Hours",
+    "emergency": "Emergency",
+    "allRightsReserved": "All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms & Conditions"
+  },
+
+  "common": {
+    "learnMore": "Learn More",
+    "readMore": "Read More",
+    "viewAll": "View All",
+    "contactUs": "Contact Us",
+    "bookAppointment": "Book an Appointment",
+    "loading": "Loading...",
+    "close": "Close",
+    "menu": "Menu"
+  }
+}
