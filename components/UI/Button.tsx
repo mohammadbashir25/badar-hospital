@@ -19,20 +19,20 @@ const baseStyles =
 
 interface CommonProps {
   variant?: ButtonVariant;
-  children: ReactNode;
   className?: string;
 }
 
 interface ButtonAsButton
-  extends CommonProps,
-    ButtonHTMLAttributes<HTMLButtonElement> {
+  extends CommonProps, ButtonHTMLAttributes<HTMLButtonElement> {
   href?: undefined;
+  children?: ReactNode;
 }
 
 interface ButtonAsLink extends CommonProps {
   href: string;
   target?: string;
   rel?: string;
+  children?: ReactNode;
 }
 
 type ButtonProps = ButtonAsButton | ButtonAsLink;
@@ -47,6 +47,7 @@ export default function Button({
 
   if ("href" in props && props.href) {
     const { href, ...linkProps } = props;
+
     return (
       <Link href={href} className={classes} {...linkProps}>
         {children}
