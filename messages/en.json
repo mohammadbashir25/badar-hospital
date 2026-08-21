@@ -12,7 +12,7 @@
 
   "hero": {
     "eyebrow": "Trusted Healthcare",
-    "title": "Your Health, Our Priority",
+    "title": "Badar — A Home of Hope, Care, and Compassion",
     "description": "Providing professional, compassionate, and patient-centered healthcare with modern medical facilities and dedicated healthcare professionals.",
     "primaryCta": "Book an Appointment",
     "secondaryCta": "Explore Our Services",
@@ -60,6 +60,14 @@
     "pharmacy": {
       "title": "Pharmacy Services",
       "description": "Convenient access to prescribed medicines and pharmaceutical support."
+    },
+    "ultrasound": {
+      "title": "Ultrasound",
+      "description": "Non-invasive ultrasound imaging services for safe and effective medical evaluation."
+    },
+    "ctScan": {
+      "title": "CT Scan",
+      "description": "Advanced CT imaging services to support accurate medical diagnosis and evaluation."
     }
   },
 
@@ -73,20 +81,33 @@
       "title": "General Medicine",
       "description": "Comprehensive medical care for adults and common health concerns."
     },
-
-    "surgery": {
-      "title": "Surgery",
-      "description": "Professional surgical care supported by experienced medical teams."
+    "generalSurgery": {
+      "title": "General Surgery",
+      "description": "Professional surgical care provided by experienced medical teams."
     },
-
+    "neurosurgery": {
+      "title": "Neurosurgery",
+      "description": "Specialized surgical care for conditions affecting the brain, spine, and nervous system."
+    },
+    "ent": {
+      "title": "Ear, Nose & Throat",
+      "description": "Specialized care for conditions affecting the ear, nose, throat, and related areas."
+    },
+    "gynecologyObstetrics": {
+      "title": "Gynecology & Obstetrics",
+      "description": "Dedicated healthcare services focused on women's health, pregnancy, and maternity care."
+    },
+    "dental": {
+      "title": "Dental Department",
+      "description": "Professional dental care focused on oral health and comprehensive dental services."
+    },
+    "psychiatry": {
+      "title": "Psychiatry",
+      "description": "Professional mental healthcare and support for psychological and psychiatric conditions."
+    },
     "pediatrics": {
       "title": "Pediatrics",
-      "description": "Dedicated healthcare services focused on children and their well-being."
-    },
-
-    "gynecology": {
-      "title": "Gynecology",
-      "description": "Professional healthcare services focused on women's health."
+      "description": "Dedicated healthcare services focused on children's health, development, and well-being."
     }
   },
 
@@ -95,7 +116,10 @@
     "title": "Meet Our Healthcare Professionals",
     "description": "Our medical professionals are dedicated to providing respectful, compassionate, and quality patient care.",
     "viewAll": "Meet Our Doctors",
-    "viewProfile": "View Profile"
+    "viewProfile": "View Profile",
+    "placeholderName": "Doctor Name",
+    "placeholderSpecialty": "Specialty",
+    "placeholderQualification": "Qualification"
   },
 
   "facilities": {
@@ -125,7 +149,20 @@
     "title": "Take the Next Step Toward Better Care",
     "description": "Our team is here to help you access the healthcare and support you need.",
     "primaryCta": "Book an Appointment",
-    "secondaryCta": "Contact Us"
+    "secondaryCta": "Contact Us",
+
+    "emergency": {
+      "eyebrow": "Emergency",
+      "title": "Need Urgent Medical Care?",
+      "description": "Placeholder emergency description. Replace with real emergency care information, hours, and guidance for patients.",
+      "ctaLabel": "Call Now",
+      "contacts": [
+        {
+          "label": "Emergency Hotline",
+          "phone": "+93000000000"
+        }
+      ]
+    }
   },
 
   "footer": {
@@ -152,5 +189,71 @@
     "loading": "Loading...",
     "close": "Close",
     "menu": "Menu"
+  },
+  "whyChooseBadar": {
+    "eyebrow": "Why Choose Badar",
+    "title": "Care You Can Rely On",
+    "description": "A few reasons patients choose Badar Medical Hospital for their healthcare needs.",
+    "reasons": {
+      "trustedCare": {
+        "title": "Trusted, Professional Care",
+        "description": "A respectful and professional environment built around trusted medical practice."
+      },
+      "compassionateTeam": {
+        "title": "Compassionate Healthcare Team",
+        "description": "A dedicated team that puts patient comfort and well-being first."
+      },
+      "modernFacilities": {
+        "title": "Modern Medical Facilities",
+        "description": "A comfortable, modern environment designed to support quality care."
+      },
+      "comprehensiveCare": {
+        "title": "Comprehensive Specialties",
+        "description": "Access to a wide range of medical specialties and healthcare services in one place."
+      }
+    }
+  },
+
+  "testimonials": {
+    "eyebrow": "Patient Stories",
+    "title": "What Our Patients Say",
+    "description": "Real experiences shared by patients who have received care at Badar Medical Hospital.",
+    "previous": "Previous testimonial",
+    "next": "Next testimonial",
+    "goToTestimonial": "Go to testimonial {number}",
+    "pauseAutoplay": "Pause autoplay",
+    "playAutoplay": "Resume autoplay",
+    "items": [
+      {
+        "quote": "Placeholder testimonial 1. Replace with a real patient quote describing their experience at Badar Medical Hospital.",
+        "name": "Patient Name",
+        "role": "Patient",
+        "image": "/images/testimonials/patient-1.jpg"
+      },
+      {
+        "quote": "Placeholder testimonial 2. Replace with a real patient quote describing their experience at Badar Medical Hospital.",
+        "name": "Patient Name",
+        "role": "Patient",
+        "image": "/images/testimonials/patient-2.jpg"
+      },
+      {
+        "quote": "Placeholder testimonial 3. Replace with a real patient quote describing their experience at Badar Medical Hospital.",
+        "name": "Patient Name",
+        "role": "Patient",
+        "image": "/images/testimonials/patient-3.jpg"
+      },
+      {
+        "quote": "Placeholder testimonial 4. Replace with a real patient quote describing their experience at Badar Medical Hospital.",
+        "name": "Patient Name",
+        "role": "Patient",
+        "image": "/images/testimonials/patient-4.jpg"
+      },
+      {
+        "quote": "Placeholder testimonial 5. Replace with a real patient quote describing their experience at Badar Medical Hospital.",
+        "name": "Patient Name",
+        "role": "Patient",
+        "image": "/images/testimonials/patient-5.jpg"
+      }
+    ]
   }
 }

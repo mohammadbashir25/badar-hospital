@@ -5,7 +5,7 @@ import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { LuMenu, LuX } from "react-icons/lu";
 import { Link } from "@/i18n/navigation";
 import Button from "../UI/Button";
-import LocaleSwitcher from "./LocaleSwitcher";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 interface NavItem {
   href: string;
@@ -29,7 +29,6 @@ export default function MobileMenu({
   const panelId = useId();
   const reduceMotion = useReducedMotion();
 
-  // Prevent background scroll while the drawer is open.
   useEffect(() => {
     if (!open) return;
     const original = document.body.style.overflow;
@@ -77,20 +76,20 @@ export default function MobileMenu({
               role="dialog"
               aria-modal="true"
               aria-label={menuLabel}
-              className="ms-auto flex h-full w-full max-w-xs flex-col gap-6 bg-surface px-6 py-6 shadow-xl"
+              className="ms-auto flex h-full w-full max-w-xs flex-col gap-6 bg-surface px-6 py-6 shadow-sm"
               initial={{ x: reduceMotion ? 0 : "100%" }}
               animate={{ x: 0 }}
               exit={{ x: reduceMotion ? 0 : "100%" }}
               transition={{ duration: reduceMotion ? 0 : 0.25, ease: "easeOut" }}
               onClick={(e) => e.stopPropagation()}
             >
-              <div className="flex items-center justify-between">
+              <div className="flex items-start justify-between ">
                 <span className="text-base font-semibold text-navy">{menuLabel}</span>
                 <button
                   type="button"
                   onClick={() => setOpen(false)}
                   aria-label={closeLabel}
-                  className="flex h-10 w-10 items-center justify-center rounded-full text-navy transition-colors hover:bg-surface-soft"
+                  className="flex h-10 w-10 items-start justify-center rounded-full text-navy transition-colors hover:bg-surface-soft "
                 >
                   <LuX size={20} aria-hidden="true" />
                 </button>
@@ -116,7 +115,7 @@ export default function MobileMenu({
               </motion.nav>
 
               <div className="mt-auto flex flex-col gap-4">
-                <LocaleSwitcher />
+                <LanguageSwitcher className="self-start" />
                 <Button href="/appointment" variant="primary" className="w-full">
                   {bookAppointmentLabel}
                 </Button>

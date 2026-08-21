@@ -6,6 +6,8 @@ import { Inter, Noto_Sans_Arabic } from "next/font/google";
 
 import { routing } from "../../i18n/routing";
 import "../globals.css";
+import Navbar from "@/components/Layout/Navbar";
+import Footer from "@/components/Layout/Footer";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -121,7 +123,13 @@ export default async function LocaleLayout({
     >
       <body className="min-h-full flex flex-col bg-background">
         <NextIntlClientProvider messages={messages}>
+          <header>
+            <Navbar />
+          </header>
           {children}
+          <footer>
+            <Footer />
+          </footer>
         </NextIntlClientProvider>
       </body>
     </html>
