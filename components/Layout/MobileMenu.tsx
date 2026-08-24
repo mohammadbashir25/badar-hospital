@@ -15,6 +15,7 @@ interface NavItem {
 interface MobileMenuProps {
   navItems: NavItem[];
   bookAppointmentLabel: string;
+  bookAppointmentHref: string;
   menuLabel: string;
   closeLabel: string;
 }
@@ -22,6 +23,7 @@ interface MobileMenuProps {
 export default function MobileMenu({
   navItems,
   bookAppointmentLabel,
+  bookAppointmentHref,
   menuLabel,
   closeLabel,
 }: MobileMenuProps) {
@@ -31,21 +33,34 @@ export default function MobileMenu({
 
   useEffect(() => {
     if (!open) return;
+
     const original = document.body.style.overflow;
     document.body.style.overflow = "hidden";
+
     return () => {
       document.body.style.overflow = original;
     };
   }, [open]);
 
   const listVariants = {
-    open: { transition: { staggerChildren: reduceMotion ? 0 : 0.05, delayChildren: 0.1 } },
+    open: {
+      transition: {
+        staggerChildren: reduceMotion ? 0 : 0.05,
+        delayChildren: reduceMotion ? 0 : 0.1,
+      },
+    },
     closed: {},
   };
 
   const itemVariants = {
-    open: { opacity: 1, x: 0 },
-    closed: { opacity: 0, x: reduceMotion ? 0 : 12 },
+    open: {
+      opacity: 1,
+      x: 0,
+    },
+    closed: {
+      opacity: 0,
+      x: reduceMotion ? 0 : 12,
+    },
   };
 
   return (
@@ -62,13 +77,15 @@ export default function MobileMenu({
       </button>
 
       <AnimatePresence>
-        {open ? (
+        {open && (
           <motion.div
             className="fixed inset-0 z-50 bg-navy/40"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: reduceMotion ? 0 : 0.2 }}
+            transition={{
+              duration: reduceMotion ? 0 : 0.2,
+            }}
             onClick={() => setOpen(false)}
           >
             <motion.div
@@ -76,27 +93,41 @@ export default function MobileMenu({
               role="dialog"
               aria-modal="true"
               aria-label={menuLabel}
-              className="ms-auto flex h-full w-full max-w-xs flex-col gap-6 bg-surface px-6 py-6 shadow-sm"
-              initial={{ x: reduceMotion ? 0 : "100%" }}
-              animate={{ x: 0 }}
-              exit={{ x: reduceMotion ? 0 : "100%" }}
-              transition={{ duration: reduceMotion ? 0 : 0.25, ease: "easeOut" }}
+              className="ms-auto flex h-full w-full max-w-xs flex-col bg-surface px-6 py-6"
+              initial={{
+                x: reduceMotion ? 0 : "100%",
+              }}
+              animate={{
+                x: 0,
+              }}
+              exit={{
+                x: reduceMotion ? 0 : "100%",
+              }}
+              transition={{
+                duration: reduceMotion ? 0 : 0.25,
+                ease: "easeOut",
+              }}
               onClick={(e) => e.stopPropagation()}
             >
-              <div className="flex items-start justify-between ">
-                <span className="text-base font-semibold text-navy">{menuLabel}</span>
+              {/* Header */}
+              <div className="flex items-start justify-between">
+                <span className="text-base font-semibold text-navy">
+                  {menuLabel}
+                </span>
+
                 <button
                   type="button"
                   onClick={() => setOpen(false)}
                   aria-label={closeLabel}
-                  className="flex h-10 w-10 items-start justify-center rounded-full text-navy transition-colors hover:bg-surface-soft "
+                  className="flex h-10 w-10 items-start justify-center rounded-full text-navy transition-colors hover:bg-surface-soft"
                 >
                   <LuX size={20} aria-hidden="true" />
                 </button>
               </div>
 
+              {/* Navigation */}
               <motion.nav
-                className="flex flex-col gap-1"
+                className="mt-6 flex flex-col gap-1 px-3 bg-surface"
                 initial="closed"
                 animate="open"
                 variants={listVariants}
@@ -114,15 +145,21 @@ export default function MobileMenu({
                 ))}
               </motion.nav>
 
-              <div className="mt-auto flex flex-col gap-4">
+              {/* Bottom Actions */}
+              <div className="mt-auto flex flex-col gap-4 bg-surface px-3 py-2">
                 <LanguageSwitcher className="self-start" />
-                <Button href="/appointment" variant="primary" className="w-full">
+
+                <Button
+                  href={bookAppointmentHref}
+                  variant="primary"
+                  className="w-full"
+                >
                   {bookAppointmentLabel}
                 </Button>
               </div>
             </motion.div>
           </motion.div>
-        ) : null}
+        )}
       </AnimatePresence>
     </div>
   );

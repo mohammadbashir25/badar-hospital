@@ -5,6 +5,7 @@ import Button from "../UI/Button";
 import Badge from "../UI/Badge";
 import HeroMotion from "./HeroMotion";
 import Image from "next/image";
+import { WHATSAPP_APPOINTMENT_URL } from "@/lib/whatsapp";
 
 export default async function Hero() {
   const t = await getTranslations("hero");
@@ -29,7 +30,7 @@ export default async function Hero() {
           </p>
 
           <div className="flex flex-col gap-3 sm:flex-row">
-            <Button href="/appointment" variant="primary">
+            <Button href={WHATSAPP_APPOINTMENT_URL} variant="primary">
               {t("primaryCta")}
             </Button>
             <Button href="/services" variant="outline">

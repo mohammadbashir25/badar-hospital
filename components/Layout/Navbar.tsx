@@ -4,6 +4,7 @@ import Container from "../UI/Container";
 import Button from "../UI/Button";
 import LanguageSwitcher from "./LanguageSwitcher";
 import MobileMenu from "./MobileMenu";
+import { WHATSAPP_APPOINTMENT_URL } from "@/lib/whatsapp";
 
 export default async function Navbar() {
   const t = await getTranslations("nav");
@@ -42,7 +43,7 @@ export default async function Navbar() {
 
         <div className="hidden items-center gap-3 lg:flex">
           <LanguageSwitcher />
-          <Button href="/appointment" variant="primary">
+          <Button href={WHATSAPP_APPOINTMENT_URL} variant="primary">
             {t("bookAppointment")}
           </Button>
         </div>
@@ -50,6 +51,7 @@ export default async function Navbar() {
         <MobileMenu
           navItems={navItems}
           bookAppointmentLabel={t("bookAppointment")}
+          bookAppointmentHref={WHATSAPP_APPOINTMENT_URL}
           menuLabel={tCommon("menu")}
           closeLabel={tCommon("close")}
         />

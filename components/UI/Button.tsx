@@ -48,6 +48,24 @@ export default function Button({
   if ("href" in props && props.href) {
     const { href, ...linkProps } = props;
 
+    // External URLs (e.g. https://wa.me/...) must use a plain <a>.
+    // next-intl's Link only handles internal app routes.
+    const isExternal = /^https?:\/\//.test(href);
+
+    if (isExternal) {
+      return (
+        <a
+          href={href}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={classes}
+          {...linkProps}
+        >
+          {children}
+        </a>
+      );
+    }
+
     return (
       <Link href={href} className={classes} {...linkProps}>
         {children}
