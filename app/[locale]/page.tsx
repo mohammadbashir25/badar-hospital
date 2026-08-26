@@ -1,5 +1,4 @@
 import TrustSignals from "@/components/Hero/TrustSignals";
-import Navbar from "../../components/Layout/Navbar";
 import Hero from "@/components/Hero/Hero";
 import About from "@/components/About/About";
 import Specialties from "@/components/Specialties/Specialties";
