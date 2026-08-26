@@ -38,6 +38,12 @@ export default async function ContactPage() {
               address: t("contactInfo.items.address.label"),
               hours: t("contactInfo.items.hours.label"),
             }}
+            values={{
+              phone: t("contactInfo.items.phone.value"),
+              email: t("contactInfo.items.email.value"),
+              address: t("contactInfo.items.address.value"),
+              hours: t("contactInfo.items.hours.value"),
+            }}
           />
 
           <ContactForm

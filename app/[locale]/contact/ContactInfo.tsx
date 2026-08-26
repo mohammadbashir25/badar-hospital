@@ -2,31 +2,23 @@
 
 import { motion, useReducedMotion } from "framer-motion";
 
+
+
 // Centralized placeholder contact data.
 // Replace these values with the real hospital information.
 const contactItems = [
-  {
-    key: "phone",
-    value: "+93 000 000 000", // Replace with real phone number
-  },
-  {
-    key: "email",
-    value: "info@example.com", // Replace with real email address
-  },
-  {
-    key: "address",
-    value: "Hospital Address Placeholder, City, Afghanistan", // Replace with real address
-  },
-  {
-    key: "hours",
-    value: "Placeholder opening hours", // Replace with real opening hours
-  },
+  { key: "phone" },
+  { key: "email" },
+  { key: "address" },
+  { key: "hours" },
 ] as const;
+
 
 interface ContactInfoProps {
   eyebrow: string;
   title: string;
   description: string;
+  values: Record<(typeof contactItems)[number]["key"], string>;
   labels: Record<(typeof contactItems)[number]["key"], string>;
 }
 
@@ -35,6 +27,7 @@ export default function ContactInfo({
   title,
   description,
   labels,
+  values
 }: ContactInfoProps) {
   const reduceMotion = useReducedMotion();
 
@@ -66,7 +59,7 @@ export default function ContactInfo({
               {labels[item.key]}
             </dt>
             <dd className="mt-1 text-base font-medium text-foreground" dir="ltr">
-              {item.value}
+              {values[item.key]}
             </dd>
           </div>
         ))}

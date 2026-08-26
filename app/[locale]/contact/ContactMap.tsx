@@ -5,10 +5,10 @@ import { motion, useReducedMotion } from "framer-motion";
 // Centralized placeholder location data.
 // Replace with Badar Medical Hospital coordinates.
 const hospitalLocation = {
-  latitude: 34.52278973601946,
-  longitude: 69.32629804443681,
+  latitude: 33.340901,
+  longitude: 69.910285,
   zoom: 15,
-  address: "Hospital Address Placeholder, Khost, Afghanistan",
+  address: "opposite of the public health, Khost, Afghanistan",
 };
 
 interface ContactMapProps {

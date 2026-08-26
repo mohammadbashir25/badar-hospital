@@ -159,7 +159,7 @@
       "contacts": [
         {
           "label": "Emergency Hotline",
-          "phone": "+93000000000"
+          "phone": "+93700380380"
         }
       ]
     }
@@ -561,10 +561,22 @@
       "title": "Contact Information",
       "description": "You can reach us using the details below.",
       "items": {
-        "phone": { "label": "Phone" },
-        "email": { "label": "Email" },
-        "address": { "label": "Address" },
-        "hours": { "label": "Opening Hours" }
+        "phone": {
+          "label": "Phone",
+          "value": "+93 700380380"
+        },
+        "email": {
+          "label": "Email",
+          "value": "baderbmh49@gmail.com"
+        },
+        "address": {
+          "label": "Address",
+          "value": "Opposite to the Public Health, Khost City, Afghanistan"
+        },
+        "hours": {
+          "label": "Opening Hours",
+          "value": "Open 24 hours a day"
+        }
       }
     },
     "form": {
@@ -615,6 +627,11 @@
       "title": "For Emergencies, Call Us Directly",
       "description": "This contact form is not monitored for emergencies. If you are experiencing a medical emergency, please call our emergency line immediately.",
       "cta": "Call Emergency Line"
+    },
+
+    "contactAddress": {
+      "address": "Opposite to the Public Health, Khost City, Afghanistan"
     }
   }
 }
+

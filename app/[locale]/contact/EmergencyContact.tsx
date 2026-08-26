@@ -3,7 +3,7 @@
 import { motion, useReducedMotion } from "framer-motion";
 
 // Placeholder emergency number — replace with the real number.
-const emergencyPhone = "+93000000000";
+const emergencyPhone = "+93700380380";
 
 interface EmergencyContactProps {
   eyebrow: string;
