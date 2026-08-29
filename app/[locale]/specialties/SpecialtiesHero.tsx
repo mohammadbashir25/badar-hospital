@@ -43,15 +43,16 @@ export default function SpecialtiesHero({
         initial={reduceMotion ? undefined : { opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8, delay: 0.2 }}
-        className="relative mx-6 mb-16 aspect-[16/7] overflow-hidden rounded-2xl border border-border-light bg-surface-soft lg:mx-8"
+        className="relative mx-6 mb-16 overflow-hidden rounded-2xl border border-border-light bg-surface-soft lg:mx-8"
       >
         <Image
-          src="/images/specialties/specialties-hero.jpg"
+          src="/specialties/all.png"
           alt={imageAlt}
-          fill
+          width={1600}
+          height={700}
           priority
           sizes="100vw"
-          className="object-cover"
+          className="h-auto w-full object-contain"
         />
       </motion.div>
     </section>

@@ -15,24 +15,61 @@ export async function generateMetadata(): Promise<Metadata> {
   };
 }
 
+interface ChiefTranslation {
+  badge: string;
+  name: string;
+  specialty: string;
+  qualification: string;
+  description: string;
+  image: string;
+}
+
+interface DoctorTranslation {
+  name: string;
+  specialty: string;
+  qualification: string;
+  description: string;
+  image: string;
+}
+
 export default async function DoctorsPage() {
   const t = await getTranslations("doctorsPage");
 
-  // No real doctor data has been provided yet — using translated
-  // placeholders. Replace this array with real doctor entries
-  // (and real image paths) once that information is available.
-  const placeholderName = t("doctorPlaceholder.name");
-  const placeholderSpecialty = t("doctorPlaceholder.specialty");
-  const placeholderQualification = t("doctorPlaceholder.qualification");
-  const placeholderDescription = t("doctorPlaceholder.description");
+  const rawChief = t.raw("chief");
+  const rawList = t.raw("list");
 
-  const doctors: Doctor[] = Array.from({ length: 4 }).map((_, index) => ({
+  if (!Array.isArray(rawList)) {
+    // Helps pinpoint the exact problem in your terminal instead of the
+    // page crashing silently — check the dev server console for this.
+    console.error(
+      "doctorsPage.list is not an array. Received:",
+      rawList,
+      "— check that messages/{locale}.json has doctorsPage.list as an array.",
+    );
+  }
+
+  const chiefData = (rawChief ?? {}) as Partial<ChiefTranslation>;
+  const listData = (
+    Array.isArray(rawList) ? rawList : []
+  ) as DoctorTranslation[];
+
+  const chief: Doctor & { badge: string } = {
+    key: "doctor-chief",
+    name: chiefData.name ?? "",
+    specialty: chiefData.specialty ?? "",
+    qualification: chiefData.qualification ?? "",
+    description: chiefData.description ?? "",
+    image: chiefData.image ?? "/doctors/5.jpg",
+    badge: chiefData.badge ?? "",
+  };
+
+  const doctors: Doctor[] = listData.map((doctor, index) => ({
     key: `doctor-${index + 1}`,
-    name: placeholderName,
-    specialty: placeholderSpecialty,
-    qualification: placeholderQualification,
-    description: placeholderDescription,
-    image: `/images/doctors/doctor-0${index + 1}.jpg`,
+    name: doctor.name,
+    specialty: doctor.specialty,
+    qualification: doctor.qualification,
+    description: doctor.description,
+    image: doctor.image,
   }));
 
   return (
@@ -54,6 +91,7 @@ export default async function DoctorsPage() {
         eyebrow={t("doctors.eyebrow")}
         title={t("doctors.title")}
         description={t("doctors.description")}
+        chief={chief}
         doctors={doctors}
       />
 

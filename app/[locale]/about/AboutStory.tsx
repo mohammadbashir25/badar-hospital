@@ -31,7 +31,7 @@ export default function AboutStory({
           className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-border-light bg-surface-soft"
         >
           <Image
-            src="/images/about/badar-hospital-story.jpg"
+            src="/specialties/surgery.png"
             alt={imageAlt}
             fill
             sizes="(min-width: 1024px) 50vw, 100vw"

@@ -46,12 +46,13 @@ export default function DoctorsHero({
         className="relative mx-6 mb-16 aspect-[16/7] overflow-hidden rounded-2xl border border-border-light bg-surface-soft lg:mx-8"
       >
         <Image
-          src="/images/doctors/doctors-hero.jpg"
+          src="/specialties/all.png"
           alt={imageAlt}
-          fill
+          width={1600}
+          height={700}
           priority
           sizes="100vw"
-          className="object-cover"
+          className="h-auto w-full object-contain"
         />
       </motion.div>
     </section>

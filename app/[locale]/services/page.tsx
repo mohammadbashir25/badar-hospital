@@ -39,7 +39,7 @@ export default async function ServicesPage() {
         title={t("emergency.title")}
         description={t("emergency.description")}
         imageAlt={t("emergency.imageAlt")}
-        imageSrc="/images/services/emergency.jpg"
+        imageSrc="/services/emergency.png"
       />
 
       <ServiceSection
@@ -48,7 +48,7 @@ export default async function ServicesPage() {
         title={t("outpatient.title")}
         description={t("outpatient.description")}
         imageAlt={t("outpatient.imageAlt")}
-        imageSrc="/images/services/outpatient.jpg"
+        imageSrc="/services/patientCare.png"
       />
 
       <ServiceSection
@@ -56,7 +56,7 @@ export default async function ServicesPage() {
         title={t("pharmacy.title")}
         description={t("pharmacy.description")}
         imageAlt={t("pharmacy.imageAlt")}
-        imageSrc="/images/services/pharmacy.jpg"
+        imageSrc="/services/pharmacy.png"
       />
 
       <DiagnosticServices
@@ -68,19 +68,19 @@ export default async function ServicesPage() {
             title: t("ctScan.title"),
             description: t("ctScan.description"),
             imageAlt: t("ctScan.imageAlt"),
-            imageSrc: "/images/services/ct-scan.jpg",
+            imageSrc: "/services/diagnostic.png",
           },
           {
             title: t("xray.title"),
             description: t("xray.description"),
             imageAlt: t("xray.imageAlt"),
-            imageSrc: "/images/services/xray.jpg",
+            imageSrc: "/services/x-ray.png",
           },
           {
             title: t("ultrasound.title"),
             description: t("ultrasound.description"),
             imageAlt: t("ultrasound.imageAlt"),
-            imageSrc: "/images/services/ultrasound.jpg",
+            imageSrc: "/services/ultrasound.png",
           },
         ]}
       />

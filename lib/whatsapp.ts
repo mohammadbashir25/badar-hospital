@@ -1,6 +1,6 @@
 // Single source of truth for the hospital's WhatsApp appointment link.
 // Replace WHATSAPP_NUMBER with the hospital's number (country code, digits only, no +/spaces).
-const WHATSAPP_NUMBER = "93765196369";
+const WHATSAPP_NUMBER = "93794207704";
 const WHATSAPP_MESSAGE =
   "Hello, I would like to book an appointment at Badar Medical Hospital.";
 

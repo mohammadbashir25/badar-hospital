@@ -117,9 +117,43 @@
     "description": "Our medical professionals are dedicated to providing respectful, compassionate, and quality patient care.",
     "viewAll": "Meet Our Doctors",
     "viewProfile": "View Profile",
-    "placeholderName": "Doctor Name",
+    "placeholderName": "Doctor gg",
     "placeholderSpecialty": "Specialty",
-    "placeholderQualification": "Qualification"
+    "placeholderQualification": "Qualification",
+    "list": [
+      {
+        "key": "khalis mallemzai",
+        "name": "Dr. Khalis Mallemzai",
+        "specialty": "Internal Medicine",
+        "qualification": "General Internal Medicine Specialist",
+        "description": "Offers comprehensive diagnosis and treatment for adult patients.",
+        "image": "/doctors/8.jpg"
+      },
+      {
+        "key": "khan-sargul-sherzoi",
+        "name": "Dr. Khan Sargul Sherzio",
+        "specialty": "Ear, Nose & Throat",
+        "qualification": "ENT Physician & Surgeon",
+        "description": "Treats and performs surgery for conditions of the ear, nose, throat, and neck.",
+        "image": "/doctors/2.jpg"
+      },
+      {
+        "key": "omar-amin",
+        "name": "Dr. Omar Amin",
+        "specialty": "Orthopedics & Traumatology",
+        "qualification": "Orthopedic & Trauma Specialist",
+        "description": "Treats injuries and conditions of the bones, joints, and muscles.",
+        "image": "/doctors/7.jpg"
+      },
+      {
+        "key": "naseema-paktin-danesh",
+        "name": "Dr. Naseema Paktin, Danesh",
+        "specialty": "Gynecology & Obstetrics",
+        "qualification": "Gynecology & Obstetrics Specialist",
+        "description": "Provides dedicated care for women's health, pregnancy, and childbirth.",
+        "image": "/doctors/1.jpg"
+      }
+    ]
   },
 
   "facilities": {
@@ -225,34 +259,34 @@
     "playAutoplay": "Resume autoplay",
     "items": [
       {
-        "quote": "Placeholder testimonial 1. Replace with a real patient quote describing their experience at Badar Medical Hospital.",
-        "name": "Patient Name",
-        "role": "Patient",
-        "image": "/images/testimonials/patient-1.jpg"
+        "key": "testimonial-1",
+        "name": "Rahima Sultani",
+        "department": "Gynecology & Obstetrics",
+        "quote": "The team took great care of me throughout my pregnancy. I always felt heard and well looked after."
       },
       {
-        "quote": "Placeholder testimonial 2. Replace with a real patient quote describing their experience at Badar Medical Hospital.",
-        "name": "Patient Name",
-        "role": "Patient",
-        "image": "/images/testimonials/patient-2.jpg"
+        "key": "testimonial-2",
+        "name": "Ehsanullah Kakar",
+        "department": "General Surgery",
+        "quote": "My surgery went smoothly and the staff explained every step clearly. I'm grateful for their professionalism."
       },
       {
-        "quote": "Placeholder testimonial 3. Replace with a real patient quote describing their experience at Badar Medical Hospital.",
-        "name": "Patient Name",
-        "role": "Patient",
-        "image": "/images/testimonials/patient-3.jpg"
+        "key": "testimonial-3",
+        "name": "Zarghona Ahmadi",
+        "department": "Pediatrics",
+        "quote": "The pediatric team was so gentle and patient with my son. It made a stressful visit much easier."
       },
       {
-        "quote": "Placeholder testimonial 4. Replace with a real patient quote describing their experience at Badar Medical Hospital.",
-        "name": "Patient Name",
-        "role": "Patient",
-        "image": "/images/testimonials/patient-4.jpg"
+        "key": "testimonial-4",
+        "name": "Naqibullah Wardak",
+        "department": "Orthopedics & Traumatology",
+        "quote": "After my injury, the orthopedic doctors got me back on my feet faster than I expected."
       },
       {
-        "quote": "Placeholder testimonial 5. Replace with a real patient quote describing their experience at Badar Medical Hospital.",
-        "name": "Patient Name",
-        "role": "Patient",
-        "image": "/images/testimonials/patient-5.jpg"
+        "key": "testimonial-5",
+        "name": "Homa Rasooli",
+        "department": "Internal Medicine",
+        "quote": "I've been coming here for check-ups for years. The doctors are thorough and always take time to answer my questions."
       }
     ]
   },
@@ -491,6 +525,49 @@
       "qualification": "Qualification",
       "description": "Profile details for this doctor will be added soon."
     },
+    "chief": {
+      "key": "aminullah faheem",
+      "badge": "Chief Medical Officer",
+      "name": "Dr. Aminullah Faheem",
+      "specialty": "General Surgery",
+      "qualification": "General Surgery Specialist & Chief Physician",
+      "description": "Dr. Farmeem leads our medical team with a career built on surgical precision and patient trust. He oversees clinical standards across Badar Medical Hospital and continues to see patients personally, believing that leadership in medicine starts with hands-on care.",
+      "image": "/doctors/5.jpg"
+    },
+    "list": [
+      {
+        "key": "abdul-qayoom",
+        "name": "Dr. Abdul Qayoom Qasemzai",
+        "specialty": "Neurosurgery",
+        "qualification": "Specialist Neurosurgeon",
+        "description": "Specializes in surgical care for conditions of the brain, spine, and nervous system.",
+        "image": "/doctors/4.jpg"
+      },
+      {
+        "key": "abdul-jabbar-omar",
+        "name": "Dr. Abdul Jabbar Omar",
+        "specialty": "Internal Medicine",
+        "qualification": "General Internal Medicine Specialist",
+        "description": "Diagnoses and treats a wide range of adult health conditions.",
+        "image": "/doctors/9.jpg"
+      },
+      {
+        "key": "baitullah-tajzai",
+        "name": "Dr. Baitullah Tajzio",
+        "specialty": "Pediatrics",
+        "qualification": "Pediatric Internal Medicine Specialist",
+        "description": "Provides dedicated care for children's health and developmental needs.",
+        "image": "/doctors/3.jpg"
+      },
+      {
+        "key": "fazal-rahman-mangal",
+        "name": "Dr. Fazal Rahman Mangal",
+        "specialty": "Pediatrics",
+        "qualification": "Pediatrics Specialist",
+        "description": "Focused on the health, growth, and well-being of infants and children.",
+        "image": "/doctors/6.jpg"
+      }
+    ],
     "appointment": {
       "eyebrow": "Schedule a Visit",
       "title": "Arrange an Appointment With Our Team",
@@ -634,4 +711,3 @@
     }
   }
 }
-

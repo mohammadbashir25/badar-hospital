@@ -5,7 +5,6 @@ interface TestimonialItem {
   quote: string;
   name: string;
   role?: string;
-  image: string;
 }
 
 export default async function Testimonials() {

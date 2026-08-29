@@ -38,7 +38,7 @@ export default async function FacilitiesPage() {
         title={t("emergency.title")}
         description={t("emergency.description")}
         imageAlt={t("emergency.imageAlt")}
-        imageSrc="/images/facilities/emergency.jpg"
+        imageSrc="/services/emergency.png"
       />
 
       <FacilitySection
@@ -47,7 +47,7 @@ export default async function FacilitiesPage() {
         title={t("diagnostic.title")}
         description={t("diagnostic.description")}
         imageAlt={t("diagnostic.imageAlt")}
-        imageSrc="/images/facilities/diagnostics.jpg"
+        imageSrc="/services/diagnostic.png"
       />
 
       <FacilitySection
@@ -55,7 +55,7 @@ export default async function FacilitiesPage() {
         title={t("patientCare.title")}
         description={t("patientCare.description")}
         imageAlt={t("patientCare.imageAlt")}
-        imageSrc="/images/facilities/patient-care.jpg"
+        imageSrc="/services/patientCare.png"
       />
 
       <FacilitySection
@@ -65,7 +65,7 @@ export default async function FacilitiesPage() {
         title={t("environment.title")}
         description={t("environment.description")}
         imageAlt={t("environment.imageAlt")}
-        imageSrc="/images/facilities/environment.jpg"
+        imageSrc="/services/enviroment.png"
       />
 
       <FacilitySection
@@ -73,7 +73,7 @@ export default async function FacilitiesPage() {
         title={t("accessibility.title")}
         description={t("accessibility.description")}
         imageAlt={t("accessibility.imageAlt")}
-        imageSrc="/images/facilities/facility-01.jpg"
+        imageSrc="/services/patientSupport.png"
       />
 
       <FacilitiesCTA

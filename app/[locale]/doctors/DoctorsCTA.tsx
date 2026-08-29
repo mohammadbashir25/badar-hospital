@@ -2,6 +2,8 @@
 
 import { motion, useReducedMotion } from "framer-motion";
 import { Link } from "@/i18n/navigation";
+import Button from "@/components/UI/Button";
+import { WHATSAPP_APPOINTMENT_URL } from "@/lib/whatsapp";
 
 interface DoctorsCTAProps {
   eyebrow: string;
@@ -44,12 +46,9 @@ export default function DoctorsCTA({
                 {description}
               </p>
             </div>
-            <Link
-              href="/appointment"
-              className="inline-flex flex-shrink-0 items-center justify-center rounded-full bg-primary px-8 py-3 text-sm font-semibold text-white transition hover:bg-primary-dark"
-            >
+            <Button href={WHATSAPP_APPOINTMENT_URL} variant="primary">
               {primaryCta}
-            </Link>
+            </Button>
           </motion.div>
         </div>
       </section>
@@ -77,12 +76,9 @@ export default function DoctorsCTA({
           </p>
 
           <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <Link
-              href="/appointment"
-              className="inline-flex items-center justify-center rounded-full bg-primary px-8 py-3 text-sm font-semibold text-white transition hover:bg-primary-dark"
-            >
+            <Button href={WHATSAPP_APPOINTMENT_URL} variant="primary">
               {primaryCta}
-            </Link>
+            </Button>
             {secondaryCta ? (
               <Link
                 href="/contact"

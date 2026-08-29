@@ -11,8 +11,8 @@ export type FeaturedDoctor = {
 };
 
 export const featuredDoctors: FeaturedDoctor[] = [
-  { id: "doctor-1", imageSrc: "/images/doctors/doctor-1.jpg" },
-  { id: "doctor-2", imageSrc: "/images/doctors/doctor-2.jpg" },
-  { id: "doctor-3", imageSrc: "/images/doctors/doctor-3.jpg" },
-  { id: "doctor-4", imageSrc: "/images/doctors/doctor-4.jpg" },
+  { id: "doctor-1", imageSrc: "/doctors/2.jpg" },
+  { id: "doctor-2", imageSrc: "/doctors/3.jpg" },
+  { id: "doctor-3", imageSrc: "/doctors/4.jpg" },
+  { id: "doctor-4", imageSrc: "/doctors/1.jpg" },
 ];

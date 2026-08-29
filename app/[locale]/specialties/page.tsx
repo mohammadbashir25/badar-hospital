@@ -39,7 +39,7 @@ export default async function SpecialtiesPage() {
         title={t("generalMedicine.title")}
         description={t("generalMedicine.description")}
         imageAlt={t("generalMedicine.imageAlt")}
-        imageSrc="/images/specialties/general-medicine.jpg"
+        imageSrc="/specialties/generalMedicine.png"
       />
 
       <SpecialtySection
@@ -48,7 +48,7 @@ export default async function SpecialtiesPage() {
         title={t("generalSurgery.title")}
         description={t("generalSurgery.description")}
         imageAlt={t("generalSurgery.imageAlt")}
-        imageSrc="/images/specialties/general-surgery.jpg"
+        imageSrc="/specialties/surgery.png"
       />
 
       <SpecialtySection
@@ -56,7 +56,7 @@ export default async function SpecialtiesPage() {
         title={t("obstetricsGynecology.title")}
         description={t("obstetricsGynecology.description")}
         imageAlt={t("obstetricsGynecology.imageAlt")}
-        imageSrc="/images/specialties/obgyn.jpg"
+        imageSrc="/specialties/obstestrics.png"
       />
 
       <SpecialtyGrid
@@ -65,31 +65,31 @@ export default async function SpecialtiesPage() {
             title: t("neurosurgery.title"),
             description: t("neurosurgery.description"),
             imageAlt: t("neurosurgery.imageAlt"),
-            imageSrc: "/images/specialties/neurosurgery.jpg",
+            imageSrc: "/specialties/neurology.png",
           },
           {
             title: t("ent.title"),
             description: t("ent.description"),
             imageAlt: t("ent.imageAlt"),
-            imageSrc: "/images/specialties/ent.jpg",
+            imageSrc: "/specialties/ENT.png",
           },
           {
             title: t("dental.title"),
             description: t("dental.description"),
             imageAlt: t("dental.imageAlt"),
-            imageSrc: "/images/specialties/dental.jpg",
+            imageSrc: "/specialties/dental.png",
           },
           {
             title: t("psychiatry.title"),
             description: t("psychiatry.description"),
             imageAlt: t("psychiatry.imageAlt"),
-            imageSrc: "/images/specialties/psychiatry.jpg",
+            imageSrc: "/specialties/psychology.png",
           },
           {
             title: t("pediatrics.title"),
             description: t("pediatrics.description"),
             imageAlt: t("pediatrics.imageAlt"),
-            imageSrc: "/images/specialties/pediatrics.jpg",
+            imageSrc: "/specialties/ped.png",
           },
         ]}
       />

@@ -3,17 +3,21 @@
 import { motion, useReducedMotion, type Variants } from "framer-motion";
 import { Link } from "@/i18n/navigation";
 import DoctorCard from "./DoctorCard";
-import type { FeaturedDoctor } from "./doctors.data";
+
+type FeaturedDoctorDisplay = {
+  id: string;
+  imageSrc: string;
+  name: string;
+  specialty: string;
+  qualification: string;
+};
 
 type DoctorsMotionProps = {
   eyebrow: string;
   title: string;
   description: string;
   viewAllLabel: string;
-  placeholderName: string;
-  placeholderSpecialty: string;
-  placeholderQualification: string;
-  doctors: FeaturedDoctor[];
+  doctors: FeaturedDoctorDisplay[];
 };
 
 export default function DoctorsMotion({
@@ -21,9 +25,6 @@ export default function DoctorsMotion({
   title,
   description,
   viewAllLabel,
-  placeholderName,
-  placeholderSpecialty,
-  placeholderQualification,
   doctors,
 }: DoctorsMotionProps) {
   const shouldReduceMotion = useReducedMotion();
@@ -42,7 +43,10 @@ export default function DoctorsMotion({
   const stagger: Variants = {
     hidden: {},
     show: {
-      transition: { staggerChildren: shouldReduceMotion ? 0 : 0.1, delayChildren: 0.1 },
+      transition: {
+        staggerChildren: shouldReduceMotion ? 0 : 0.1,
+        delayChildren: 0.1,
+      },
     },
   };
 
@@ -50,17 +54,18 @@ export default function DoctorsMotion({
     ? { hidden: { opacity: 1 }, show: { opacity: 1 } }
     : {
         hidden: { opacity: 0, y: 16 },
-        show: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] } },
+        show: {
+          opacity: 1,
+          y: 0,
+          transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] },
+        },
       };
 
   return (
-    <section aria-labelledby="doctors-heading" className="bg-background py-20 sm:py-24 lg:py-32">
-      {/*
-        Single scroll trigger for the whole section — header and grid inherit
-        "show" from this one motion.div via variant propagation, so they
-        always animate in together instead of relying on two separate
-        viewport checks.
-      */}
+    <section
+      aria-labelledby="doctors-heading"
+      className="bg-background py-20 sm:py-24 lg:py-32"
+    >
       <motion.div
         initial="hidden"
         whileInView="show"
@@ -113,11 +118,16 @@ export default function DoctorsMotion({
           className="mt-14 grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3 xl:grid-cols-4"
         >
           {doctors.map((doctor) => (
-            <motion.li key={doctor.id} variants={cardItem} className="list-none">
+            <motion.li
+              key={doctor.id}
+              variants={cardItem}
+              className="list-none"
+            >
               <DoctorCard
-                name={placeholderName}
-                specialty={placeholderSpecialty}
-                qualification={placeholderQualification}
+                name={doctor.name}
+                specialty={doctor.specialty}
+                qualification={doctor.qualification}
+                imageSrc={doctor.imageSrc}
               />
             </motion.li>
           ))}

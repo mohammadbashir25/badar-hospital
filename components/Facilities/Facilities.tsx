@@ -66,17 +66,17 @@ function PatientCareIcon(): ReactElement {
 const FACILITIES: { key: FacilityKey; image: string; icon: ReactElement }[] = [
   {
     key: "modern",
-    image: "/images/facilities/modern.jpg",
+    image: "/services/modren.png",
     icon: <ModernIcon />,
   },
   {
     key: "diagnostic",
-    image: "/images/facilities/diagnostic.jpg",
+    image: "/services/diagnostic.png",
     icon: <DiagnosticIcon />,
   },
   {
     key: "patientCare",
-    image: "/images/facilities/patient-care.jpg",
+    image: "/services/patientCare.png",
     icon: <PatientCareIcon />,
   },
 ];

@@ -46,7 +46,7 @@ export default function ServicesHero({
         className="relative mx-6 mb-16 aspect-[16/7] overflow-hidden rounded-2xl border border-border-light bg-surface-soft lg:mx-8"
       >
         <Image
-          src="/images/services/services-hero.jpg"
+          src="/specialties/surgery.png"
           alt={imageAlt}
           fill
           priority

@@ -2,6 +2,8 @@
 
 import { motion, useReducedMotion } from "framer-motion";
 import { Link } from "@/i18n/navigation";
+import Button from "@/components/UI/Button";
+import { WHATSAPP_APPOINTMENT_URL } from "@/lib/whatsapp";
 
 interface SpecialtiesCTAProps {
   eyebrow: string;
@@ -41,12 +43,9 @@ export default function SpecialtiesCTA({
           </p>
 
           <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <Link
-              href="/appointment"
-              className="inline-flex items-center justify-center rounded-full bg-primary px-8 py-3 text-sm font-semibold text-white transition hover:bg-primary-dark"
-            >
+            <Button href={WHATSAPP_APPOINTMENT_URL} variant="primary">
               {primaryCta}
-            </Link>
+            </Button>
             <Link
               href="/services"
               className="inline-flex items-center justify-center rounded-full border border-white/30 px-8 py-3 text-sm font-semibold text-white transition hover:bg-white/10"

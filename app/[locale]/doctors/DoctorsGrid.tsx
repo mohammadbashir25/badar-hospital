@@ -3,10 +3,15 @@
 import { motion, useReducedMotion } from "framer-motion";
 import DoctorCard, { type Doctor } from "./DoctorCard";
 
+interface ChiefDoctor extends Doctor {
+  badge: string;
+}
+
 interface DoctorsGridProps {
   eyebrow: string;
   title: string;
   description: string;
+  chief: ChiefDoctor;
   doctors: Doctor[];
 }
 
@@ -14,6 +19,7 @@ export default function DoctorsGrid({
   eyebrow,
   title,
   description,
+  chief,
   doctors,
 }: DoctorsGridProps) {
   const reduceMotion = useReducedMotion();
@@ -39,6 +45,10 @@ export default function DoctorsGrid({
           </p>
         </motion.div>
 
+        <div className="mt-10">
+          <DoctorCard doctor={chief} featured badge={chief.badge} />
+        </div>
+
         <motion.div
           initial={reduceMotion ? undefined : "hidden"}
           whileInView="visible"
@@ -47,7 +57,7 @@ export default function DoctorsGrid({
             hidden: {},
             visible: { transition: { staggerChildren: 0.06 } },
           }}
-          className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4"
+          className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4"
         >
           {doctors.map((doctor) => (
             <DoctorCard key={doctor.key} doctor={doctor} />

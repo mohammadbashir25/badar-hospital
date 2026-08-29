@@ -1,5 +1,6 @@
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
+import Logo from "../UI/Logo";
 
 interface EmergencyContact {
   label: string;
@@ -43,9 +44,9 @@ export default async function Footer() {
             {/* Logo placeholder — replace with next/image logo component */}
             <div
               aria-hidden="true"
-              className="flex h-12 w-40 items-center justify-center rounded-lg border border-dashed border-white/25 text-xs font-medium uppercase tracking-wider text-white/40"
+              className="flex h-12 w-40 items-center justify-center rounded-lg  text-xs font-medium uppercase tracking-wider text-white/40"
             >
-              Logo
+              <Logo variant="white" />
             </div>
 
             <p className="mt-6 max-w-xs text-sm leading-relaxed text-white/60">
@@ -123,7 +124,8 @@ export default async function Footer() {
                     href={`tel:${primaryEmergencyContact.phone}`}
                     className="mt-1 inline-block text-sm font-semibold text-white transition-colors duration-300 ease-out hover:text-red-light"
                   >
-                    {primaryEmergencyContact.label}: {primaryEmergencyContact.phone}
+                    {primaryEmergencyContact.label}:{" "}
+                    {primaryEmergencyContact.phone}
                   </a>
                 </li>
               )}

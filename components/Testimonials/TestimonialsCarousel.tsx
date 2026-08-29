@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 
@@ -11,7 +10,6 @@ interface TestimonialItem {
   quote: string;
   name: string;
   role?: string;
-  image: string;
 }
 
 function PersonIcon() {
@@ -74,29 +72,10 @@ function PlayPauseIcon({ isPlaying }: { isPlaying: boolean }) {
   );
 }
 
-function TestimonialAvatar({ src, alt }: { src: string; alt: string }) {
-  const [hasError, setHasError] = useState(false);
-
+function TestimonialAvatar() {
   return (
-    <div className="relative h-14 w-14 shrink-0 overflow-hidden rounded-full border border-border-light bg-surface-blue">
-      {hasError ? (
-        <div
-          role="img"
-          aria-label={alt}
-          className="flex h-full w-full items-center justify-center text-primary/50"
-        >
-          <PersonIcon />
-        </div>
-      ) : (
-        <Image
-          src={src}
-          alt={alt}
-          fill
-          sizes="56px"
-          className="object-cover"
-          onError={() => setHasError(true)}
-        />
-      )}
+    <div className="relative flex h-14 w-14 shrink-0 items-center justify-center overflow-hidden rounded-full border border-border-light bg-surface-blue text-primary">
+      <PersonIcon />
     </div>
   );
 }
@@ -154,9 +133,13 @@ export default function TestimonialsCarousel({
           <AnimatePresence mode="wait" initial={false}>
             <motion.div
               key={index}
-              initial={shouldReduceMotion ? { opacity: 0 } : { opacity: 0, y: 12 }}
+              initial={
+                shouldReduceMotion ? { opacity: 0 } : { opacity: 0, y: 12 }
+              }
               animate={{ opacity: 1, y: 0 }}
-              exit={shouldReduceMotion ? { opacity: 0 } : { opacity: 0, y: -12 }}
+              exit={
+                shouldReduceMotion ? { opacity: 0 } : { opacity: 0, y: -12 }
+              }
               transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
             >
               <blockquote className="text-start text-lg leading-relaxed text-navy sm:text-xl">
@@ -164,7 +147,7 @@ export default function TestimonialsCarousel({
               </blockquote>
 
               <footer className="mt-8 flex items-center gap-4 text-start">
-                <TestimonialAvatar src={current.image} alt={current.name} />
+                <TestimonialAvatar />
                 <div>
                   <p className="font-semibold text-navy">{current.name}</p>
                   {current.role && (
@@ -197,7 +180,9 @@ export default function TestimonialsCarousel({
                 aria-label={t("goToTestimonial", { number: dotIndex + 1 })}
                 aria-current={dotIndex === index}
                 className={`h-2.5 w-2.5 rounded-full transition-colors duration-300 ease-out focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary ${
-                  dotIndex === index ? "bg-primary" : "bg-border-light hover:bg-primary/40"
+                  dotIndex === index
+                    ? "bg-primary"
+                    : "bg-border-light hover:bg-primary/40"
                 }`}
               />
             ))}
