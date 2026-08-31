@@ -46,7 +46,7 @@ export default function SpecialtiesHero({
         className="relative mx-6 mb-16 overflow-hidden rounded-2xl border border-border-light bg-surface-soft lg:mx-8"
       >
         <Image
-          src="/specialties/all.png"
+          src="/surgery.jpg"
           alt={imageAlt}
           width={1600}
           height={700}

@@ -56,7 +56,7 @@ export default async function ServicesPage() {
         title={t("pharmacy.title")}
         description={t("pharmacy.description")}
         imageAlt={t("pharmacy.imageAlt")}
-        imageSrc="/services/pharmacy.png"
+        imageSrc="/services/pharmacy.jpg"
       />
 
       <DiagnosticServices
