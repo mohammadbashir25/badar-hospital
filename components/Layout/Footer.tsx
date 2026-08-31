@@ -46,7 +46,7 @@ export default async function Footer() {
               aria-hidden="true"
               className="flex h-12 w-40 items-center justify-center rounded-lg  text-xs font-medium uppercase tracking-wider text-white/40"
             >
-              <Logo variant="white" />
+              <Logo />
             </div>
 
             <p className="mt-6 max-w-xs text-sm leading-relaxed text-white/60">
